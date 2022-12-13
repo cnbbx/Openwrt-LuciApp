@@ -71,14 +71,14 @@ endif
 
 define Build/Prepare
 	$(call Build/Prepare/Default)
-	echo "(^_^)" > $(PKG_BUILD_DIR)/public/dist/index.html
+	cp index.html $(PKG_BUILD_DIR)/public/dist/index.html
 endef
 
 define Build/Compile
 	$(call GoPackage/Build/Compile)
-ifneq ($(CONFIG_ALIST_COMPRESS_UPX),)
-	$(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/alist
-endif
+	ifneq ($(CONFIG_ALIST_COMPRESS_UPX),)
+		$(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/alist
+	endif
 endef
 
 define Package/$(PKG_NAME)/install
