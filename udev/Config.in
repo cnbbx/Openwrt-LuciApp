@@ -1,0 +1,68 @@
+menu "Configuration"
+	depends on PACKAGE_udev
+
+config UDEV_DEBUG
+	bool "enable debug messages"
+	default n
+
+config UDEV_LOGGING
+	bool "enable udev logging to syslog"
+	default n
+
+config UDEV_GUDEV
+	bool "enable Gobject libudev support"
+	default n
+
+config UDEV_INTROSPECTION
+	bool "enable GObject introspection support"
+	default n
+
+config UDEV_KEYMAP
+	bool "enable keymap fixup support"
+	default n
+
+config UDEV_MTD_PROBE
+	bool "enable MTD support"
+	default y
+
+config UDEV_RULE_GENERATOR
+	bool "enable rule_generator"
+	default y
+
+config UDEV_FLOPPY
+	bool "enable floppy devices"
+	default n
+
+config UDEV_PACKAGE
+	bool "use package"
+	default n
+
+config UDEV_SELINUX
+	bool "use SELinux"
+	default n
+
+config UDEV_ACCELEROMETER
+	bool "enable accelerometer"
+	default y
+
+config UDEV_ATA_ID
+	bool "enable ata_id"
+	default y
+
+config UDEV_CDROM_ID
+	bool "enable cdrom_id"
+	default n
+
+config UDEV_COLLECT
+	bool "enable collect"
+	default n
+
+config UDEV_SCSI_ID
+	bool "enable scsi_id"
+	default y
+
+config UDEV_V4L_ID
+	bool "enable v4l_id"
+	default y
+
+endmenu
