@@ -76,9 +76,9 @@ endef
 
 define Build/Compile
 	$(call GoPackage/Build/Compile)
-	ifeq ($(CONFIG_ALIST_COMPRESS_UPX),y)
-		$(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/alist
-	endif
+ifneq ($(CONFIG_ALIST_COMPRESS_UPX),)
+	$(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/alist
+endif
 endef
 
 define Package/$(PKG_NAME)/install
