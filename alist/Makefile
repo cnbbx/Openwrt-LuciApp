@@ -12,12 +12,12 @@ PKG_WEB_VERSION:=3.6.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/alist-org/alist/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=dc2e527f843b18b483a160afea087cad92a8e02d10851031b5b226d56361db2c
+PKG_SOURCE_URL:=https://codeload.github.com/cnbbx/alist/tar.gz/v$(PKG_VERSION)?
+PKG_HASH:=8ec0874f0f75674608d5f370945d374a2f2a193ebff1604d9cb58d4c10e68e5e
 
 PKG_LICENSE:=GPL-3.0
 PKG_LICENSE_FILE:=LICENSE
-PKG_MAINTAINER:=sbwml <admin@cooluc.com>
+PKG_MAINTAINER:=cnbbx <admin@cnbbx.com>
 
 PKG_CONFIG_DEPENDS:= \
 	CONFIG_ALIST_COMPRESS_GOPROXY \
