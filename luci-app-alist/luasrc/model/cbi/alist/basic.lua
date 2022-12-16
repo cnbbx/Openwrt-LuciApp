@@ -43,6 +43,11 @@ o.datatype = "string"
 o.default = "/tmp/alist"
 o.rmempty = false
 
+o = s:option(Value, "cdn", translate("cdn"))
+o.datatype = "string"
+o.default = "https://cdn.jsdelivr.net/npm/alist-web@$version/dist/"
+o.rmempty = false
+
 o = s:option(Button, "admin_info", translate("View Password"))
 o.rawhtml = true
 o.template = "alist/admin_info"
