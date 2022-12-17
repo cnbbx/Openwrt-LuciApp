@@ -14,6 +14,7 @@ PKG_RELEASE:=1
 PKG_LICENSE:=GPLv3
 PKG_LICENSE_FILES:=LICENSE
 PKG_MAINTAINER:=LEAN
+LUCI_TITLE:=Auto Select IPv6 Helper Package
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 
@@ -27,7 +28,7 @@ define Package/ipv6helper
 endef
 
 define Package/ipv6helper/description
-	Autto Select Package IPv6 Helper
+	Auto Select IPv6 Helper Package
 endef
 
 $(eval $(call BuildPackage,ipv6helper))
