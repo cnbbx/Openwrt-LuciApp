@@ -14,7 +14,6 @@ PKG_RELEASE:=1
 PKG_LICENSE:=GPLv3
 PKG_LICENSE_FILES:=LICENSE
 PKG_MAINTAINER:=LEAN
-LUCI_TITLE:=Auto Select IPv6 Helper Package
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 
@@ -22,7 +21,7 @@ include $(INCLUDE_DIR)/package.mk
 
 define Package/ipv6helper
 	SECTION:=ipv6
-	TITLE:=IPv6 Helper
+	TITLE:=Auto Select IPv6 Helper Package
 	PKGARCH:=all
 	DEPENDS:=+luci-proto-ipv6 +ip6tables +libip6tc +kmod-ipt-nat6 +odhcpd-ipv6only +odhcp6c +6in4
 endef
