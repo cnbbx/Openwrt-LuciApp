@@ -1,19 +1,19 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-09 21:41+0000\n"
-"Last-Translator: Miloš Leškanič <leskanic@gmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/openwrt/"
-"luciapplicationsser2net/sk/>\n"
-"Language: sk\n"
+"PO-Revision-Date: 2022-12-04 12:08+0000\n"
+"Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/openwrt/"
+"luciapplicationsser2net/sv/>\n"
+"Language: sv\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.1-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/proxies.js:72
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/settings.js:71
 msgid "Allow the RFC 2217 protocol"
-msgstr ""
+msgstr "Tillåt RFC 2217-protokollet"
 
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/proxies.js:38
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/settings.js:37
@@ -45,11 +45,11 @@ msgstr ""
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/leds.js:19
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/proxies.js:34
 msgid "Device"
-msgstr "Zariadenie"
+msgstr "Enhet"
 
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/leds.js:15
 msgid "Driver"
-msgstr ""
+msgstr "Drivrutin"
 
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/leds.js:23
 msgid "Duration"
@@ -59,7 +59,7 @@ msgstr ""
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/settings.js:15
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/settings.js:22
 msgid "Enabled"
-msgstr "Povolené"
+msgstr "Aktiverad"
 
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/proxies.js:60
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/settings.js:59
@@ -112,7 +112,7 @@ msgstr ""
 
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/proxies.js:22
 msgid "Protocol"
-msgstr "Protokol"
+msgstr "Protokoll"
 
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/proxies.js:11
 #: applications/luci-app-ser2net/root/usr/share/luci/menu.d/luci-app-ser2net.json:23
@@ -137,7 +137,7 @@ msgstr ""
 
 #: applications/luci-app-ser2net/root/usr/share/luci/menu.d/luci-app-ser2net.json:14
 msgid "Settings"
-msgstr "Nastavenia"
+msgstr "Inställningar"
 
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/leds.js:27
 msgid "State"
@@ -196,7 +196,7 @@ msgstr ""
 
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/proxies.js:30
 msgid "Timeout"
-msgstr ""
+msgstr "Timeout"
 
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/proxies.js:70
 #: applications/luci-app-ser2net/htdocs/luci-static/resources/view/ser2net/settings.js:69
