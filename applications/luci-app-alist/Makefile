@@ -18,11 +18,11 @@ endef
 
 define Package/$(PKG_NAME)/postinst
 #!/bin/sh
-chmod 755 root/etc/init.d/alist
 [ -n "${IPKG_INSTROOT}" ] || {
 	( . /etc/uci-defaults/luci-alist ) && rm -f /etc/uci-defaults/luci-alist
 	exit 0
 }
+chmod +x "$${IPKG_INSTROOT}/etc/init.d/alist" >/dev/null 2>&1
 endef
 
 include $(TOPDIR)/feeds/luci/luci.mk
