@@ -18,6 +18,7 @@ endef
 
 define Package/$(PKG_NAME)/postinst
 #!/bin/sh
+chmod 755 root/etc/init.d/alist
 [ -n "${IPKG_INSTROOT}" ] || {
 	( . /etc/uci-defaults/luci-alist ) && rm -f /etc/uci-defaults/luci-alist
 	exit 0
