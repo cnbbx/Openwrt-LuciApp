@@ -17,7 +17,7 @@ get_config() {
 	config_get token_expires_in $1 token_expires_in 48
 	config_get allow_wan $1 allow_wan 0
 	config_load network
-	config_get lan_addr lan ipaddr "0.0.0.0"
+	config_get lan_addr lan ipaddr '0.0.0.0'
 }
 
 set_firewall() {
