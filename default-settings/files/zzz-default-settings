@@ -10,6 +10,9 @@ uci commit system
 uci set fstab.@global[0].anon_mount=1
 uci commit fstab
 
+sed -i -e "/option device 'br-lan'/a\ \toption ifname 'eth0'" /etc/config/network
+sed -i -e "/option device 'wan'/a\ \toption ifname 'wan'" /etc/config/network
+
 rm -f /usr/lib/lua/luci/view/admin_status/index/mwan.htm
 rm -f /usr/lib/lua/luci/view/admin_status/index/upnp.htm
 rm -f /usr/lib/lua/luci/view/admin_status/index/ddns.htm
@@ -49,8 +52,6 @@ sed -i '/log-facility/d' /etc/dnsmasq.conf
 echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
 
 echo 'hsts=0' > /root/.wgetrc
-
-sed -i 's/device/ifname/g' /etc/config/network
 
 rm -rf /tmp/luci-modulecache/
 rm -f /tmp/luci-indexcache
