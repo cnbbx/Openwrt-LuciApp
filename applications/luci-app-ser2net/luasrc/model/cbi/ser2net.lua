@@ -174,9 +174,4 @@ BasePort5 = s:taboption("network", Value, "BasePort5", translate("Data Center 5 
 BasePort5:depends("srvmode", "0")
 BasePort5.datatype="port"
 
-local apply = luci.http.formvalue("cbi.apply")
-if apply then
-    io.popen("/etc/init.d/ser2net_client restart")
-end
-
 return m
