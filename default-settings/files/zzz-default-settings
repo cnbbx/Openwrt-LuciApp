@@ -10,8 +10,8 @@ uci commit system
 uci set fstab.@global[0].anon_mount=1
 uci commit fstab
 
-sed -i -e "/option device 'br-lan'/a\ \toption ifname 'eth0'" /etc/config/network
-sed -i -e "/option device 'wan'/a\ \toption ifname 'wan'" /etc/config/network
+# sed -i -e "/option device 'br-lan'/a\ \toption ifname 'eth0'" /etc/config/network
+# sed -i -e "/option device 'wan'/a\ \toption ifname 'wan'" /etc/config/network
 
 rm -f /usr/lib/lua/luci/view/admin_status/index/mwan.htm
 rm -f /usr/lib/lua/luci/view/admin_status/index/upnp.htm
