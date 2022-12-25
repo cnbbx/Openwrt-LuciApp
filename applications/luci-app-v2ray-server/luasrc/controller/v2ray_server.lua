@@ -1,7 +1,6 @@
 -- Copyright 2018-2019 Lienol <lawlienol@gmail.com>
 module("luci.controller.v2ray_server", package.seeall)
 local http = require "luci.http"
-local v2ray = require "luci.model.cbi.v2ray_server.api.v2ray"
 
 function index()
 	if not nixio.fs.access("/etc/config/v2ray_server") then
