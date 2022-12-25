@@ -7,6 +7,5 @@ config service 'pptpd'
 	option localip '192.168.0.1'
 
 config login 'login'
-	option username 'lean'
-	option password 'I234567B'
-
+	option username 'cnbbx'
+	option password '12345678'
