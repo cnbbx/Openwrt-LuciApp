@@ -7,13 +7,13 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=alist
-PKG_VERSION:=3.6.0
-PKG_WEB_VERSION:=3.6.0
+PKG_VERSION:=v3.11.0
+PKG_WEB_VERSION:=v3.11.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 PKG_SOURCE_URL:=https://codeload.github.com/cnbbx/alist/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=c3aa1ab3b8abd817317dff6a2278463759c3bc8589ccec56b4a1a94422240f5f
+PKG_HASH:=8019dcd4823cad8bccc3d1ebe9853cb4382a2ece82535e17accb7d539604c3a5
 
 PKG_LICENSE:=GPL-3.0
 PKG_LICENSE_FILE:=LICENSE
@@ -27,8 +27,8 @@ PKG_BUILD_DEPENDS:=golang/host
 PKG_BUILD_PARALLEL:=1
 PKG_USE_MIPS16:=0
 
-PKG_ALIST:=github.com/alist-org/alist/v3/internal/conf
-GO_PKG:=github.com/alist-org/alist
+PKG_ALIST:=github.com/cnbbx/alist/v3/internal/conf
+GO_PKG:=github.com/cnbbx/alist
 GO_PKG_LDFLAGS:=-w -s
 GO_PKG_LDFLAGS_X:= \
 	$(PKG_ALIST).Version=v$(PKG_VERSION)-$(ARCH) \
