@@ -12,8 +12,8 @@ PKG_WEB_VERSION:=3.11.0
 PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/cnbbx/alist/tar.gz/v$(PKG_VERSION)?
-PKG_HASH:=8019dcd4823cad8bccc3d1ebe9853cb4382a2ece82535e17accb7d539604c3a5
+PKG_SOURCE_URL:=https://codeload.github.com/alist-org/alist/tar.gz/v$(PKG_VERSION)?
+PKG_HASH:=9bc62db1210191b416acfb2fc86a336e5bf30ee60fd1ea4af44c750661f9333b
 
 PKG_LICENSE:=GPL-3.0
 PKG_LICENSE_FILE:=LICENSE
