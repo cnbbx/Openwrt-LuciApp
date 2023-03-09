@@ -27,9 +27,7 @@ PKG_CONFIG_DEPENDS:= \
 LUCI_TITLE:=LuCI support for passwall 3
 LUCI_PKGARCH:=all
 LUCI_DEPENDS:=+coreutils +coreutils-base64 +coreutils-nohup +curl \
-	+ip-full +libuci-lua +lua +luci-compat +luci-lib-jsonc +resolveip +tcping \
-	+xray-core +v2ray-geoip +v2ray-geosite \
-	+unzip \
+	+resolveip +tcping +xray-core +v2ray-geoip +v2ray-geosite +unzip \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Brook:brook \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Hysteria:hysteria \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_IPv6_Nat:ip6tables-mod-nat \
@@ -67,11 +65,11 @@ config xray-core
 	bool "Include xray-core"
 	default n
 
-config v2ray-geoip
+config CONFIG_PACKAGE_v2ray-geoip
 	bool "Include v2ray-geoip"
 	default n
 
-config v2ray-geosite
+config CONFIG_PACKAGE_v2ray-geosite
 	bool "Include v2ray-geosite"
 	default n
 
