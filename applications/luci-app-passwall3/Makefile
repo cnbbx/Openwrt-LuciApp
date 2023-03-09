@@ -27,7 +27,7 @@ PKG_CONFIG_DEPENDS:= \
 LUCI_TITLE:=LuCI support for passwall 3
 LUCI_PKGARCH:=all
 LUCI_DEPENDS:=+coreutils +coreutils-base64 +coreutils-nohup +curl \
-	+resolveip +tcping +xray-core +v2ray-geoip +v2ray-geosite +unzip \
+	+resolveip +tcping +unzip \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Brook:brook \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Hysteria:hysteria \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_IPv6_Nat:ip6tables-mod-nat \
