@@ -46,8 +46,7 @@ LUCI_DEPENDS:=+coreutils +coreutils-base64 +coreutils-nohup +curl \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray:v2ray-core \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Plugin:v2ray-plugin \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo:v2ray-geoip \
-	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo:v2ray-geosite
-	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo:v2ray-geoip \
+	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo:v2ray-geosite \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Xray:xray-core
 
 define Package/$(PKG_NAME)/config
