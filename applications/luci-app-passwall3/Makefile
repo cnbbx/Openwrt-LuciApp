@@ -63,6 +63,10 @@ config PACKAGE_$(PKG_NAME)_Transparent_Proxy
 	depends on PACKAGE_$(PKG_NAME)
 	default y
 
+config xray-core
+	bool "Include xray-core"
+	default n
+
 config v2ray-geoip
 	bool "Include v2ray-geoip"
 	default n
