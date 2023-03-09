@@ -22,7 +22,9 @@ PKG_CONFIG_DEPENDS:= \
 	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_ShadowsocksR_Libev_Server \
 	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_Simple_Obfs \
 	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_V2ray \
-	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Plugin
+	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Plugin \
+	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo \
+	CONFIG_PACKAGE_$(PKG_NAME)_INCLUDE_Xray
 
 LUCI_TITLE:=LuCI support for passwall 3
 LUCI_PKGARCH:=all
@@ -45,6 +47,8 @@ LUCI_DEPENDS:=+coreutils +coreutils-base64 +coreutils-nohup +curl \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Plugin:v2ray-plugin \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo:v2ray-geoip \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo:v2ray-geosite
+	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo:v2ray-geoip \
+	+PACKAGE_$(PKG_NAME)_INCLUDE_Xray:xray-core
 
 define Package/$(PKG_NAME)/config
 menu "Configuration"
@@ -63,8 +67,8 @@ config PACKAGE_$(PKG_NAME)_Transparent_Proxy
 	depends on PACKAGE_$(PKG_NAME)
 	default y
 
-config xray-core
-	bool "Include xray-core"
+config PACKAGE_$(PKG_NAME)_INCLUDE_Xray
+	bool "Include Xray-core"
 	default n
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo
