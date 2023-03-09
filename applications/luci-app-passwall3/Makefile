@@ -42,7 +42,9 @@ LUCI_DEPENDS:=+coreutils +coreutils-base64 +coreutils-nohup +curl \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_ShadowsocksR_Libev_Server:shadowsocksr-libev-ssr-server \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_Simple_Obfs:simple-obfs \
 	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray:v2ray-core \
-	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Plugin:v2ray-plugin
+	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Plugin:v2ray-plugin \
+	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo:v2ray-geoip \
+	+PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo:v2ray-geosite
 
 define Package/$(PKG_NAME)/config
 menu "Configuration"
@@ -65,12 +67,8 @@ config xray-core
 	bool "Include xray-core"
 	default n
 
-config CONFIG_PACKAGE_v2ray-geoip
-	bool "Include v2ray-geoip"
-	default n
-
-config CONFIG_PACKAGE_v2ray-geosite
-	bool "Include v2ray-geosite"
+config PACKAGE_$(PKG_NAME)_INCLUDE_V2ray_Geo
+	bool "Include V2ray_Geo"
 	default n
 
 config PACKAGE_$(PKG_NAME)_INCLUDE_Brook
