@@ -1,0 +1,35 @@
+#!/bin/sh
+
+uci -q batch <<-EOF >/dev/null
+	set dhcp.@dnsmasq[0].localuse=1
+	commit dhcp
+	delete ucitrack.@passwall3[-1]
+	add ucitrack passwall3
+	set ucitrack.@passwall3[-1].init=passwall3
+	commit ucitrack
+	delete firewall.passwall3
+	set firewall.passwall3=include
+	set firewall.passwall3.type=script
+	set firewall.passwall3.path=/var/etc/passwall3.include
+	set firewall.passwall3.reload=1
+	commit firewall
+	delete ucitrack.@passwall3_server[-1]
+	add ucitrack passwall3_server
+	set ucitrack.@passwall3_server[-1].init=passwall3_server
+	commit ucitrack
+	delete firewall.passwall3_server
+	set firewall.passwall3_server=include
+	set firewall.passwall3_server.type=script
+	set firewall.passwall3_server.path=/var/etc/passwall3_server.include
+	set firewall.passwall3_server.reload=1
+	commit firewall
+	set uhttpd.main.max_requests=50
+	commit uhttpd
+EOF
+
+[ ! -s "/etc/config/passwall3" ] && cp -f /usr/share/passwall3/0_default_config /etc/config/passwall3
+touch /etc/config/passwall3_show >/dev/null 2>&1
+rm -f /tmp/luci-indexcache
+rm -rf /tmp/luci-modulecache/
+killall -HUP rpcd 2>/dev/null
+exit 0

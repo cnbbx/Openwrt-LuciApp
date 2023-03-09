@@ -1,0 +1,11 @@
+{
+	"luci-app-passwall3": {
+		"description": "Grant UCI access for luci-app-passwall3",
+		"read": {
+			"uci": ["passwall3", "passwall3_server"]
+		},
+		"write": {
+			"uci": ["passwall3", "passwall3_server"]
+		}
+	}
+}
