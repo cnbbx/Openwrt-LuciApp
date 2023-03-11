@@ -46,7 +46,7 @@ define Package/$(PKG_NAME)/Default
 endef
 
 define Package/$(PKG_NAME)/description
-  A file list program that supports multiple storage
+  A file list program that supports multiple storage for cnbbx
 endef
 
 define Package/$(PKG_NAME)
