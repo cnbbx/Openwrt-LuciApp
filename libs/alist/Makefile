@@ -71,6 +71,7 @@ endif
 
 define Build/Prepare
 	$(call Build/Prepare/Default)
+	wget https://cdn.jsdelivr.net/npm/alist-web@$(PKG_WEB_VERSION)/dist/index.html
 	cp index.html $(PKG_BUILD_DIR)/public/dist/index.html
 endef
 
