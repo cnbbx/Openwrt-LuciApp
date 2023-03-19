@@ -10,7 +10,7 @@ uci commit system
 uci set fstab.@global[0].anon_mount=1
 uci commit fstab
 
-# sed -i -e "/option device 'br-lan'/a\ \toption ifname 'eth0'" /etc/config/network
+# sed -i -e "/option device 'br-lan'/a\ \toption ifname 'br-lan'" /etc/config/network
 # sed -i -e "/option device 'wan'/a\ \toption ifname 'wan'" /etc/config/network
 
 rm -f /usr/lib/lua/luci/view/admin_status/index/mwan.htm
@@ -45,10 +45,15 @@ echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
 
 echo 'hsts=0' > /root/.wgetrc
 
+sed -i -e "/--color=auto/aPS1='\\\\[\\\\e[32m\\\\][\\\\[\\\\e[m\\\\]\\\\[\\\\e[31m\\\\]\\\\u\\\\[\\\\e[m\\\\]\\\\[\\\\e[33m\\\\]@\\\\[\\\\e[m\\\\]\\\\[\\\\e[32m\\\\]\\\\h\\\\[\\\\e[m\\\\]:\\\\[\\\\e[m\\\\]\\\\[\\\\e[32m\\\\]\\\\[\\\\e[1;32m\\\\]\\\\@\\\\[\\\\e[36m\\\\] \\\\w\\\\[\\\\e[m\\\\]\\\\[\\\\e[32m\\\\]]\\\\[\\\\e[0m\\\\] \\\\$\\\\[\\\\e[m\\\\] '" /etc/shinit
+sed -i -e "/--color=auto/aalias reboot='(/bin/busybox reboot &);sleep 3;/bin/busybox reboot -f'" /etc/shinit
+
 rm -rf /tmp/luci-modulecache/
 rm -f /tmp/luci-indexcache
 
 chmod 0755 /etc/init.d/*
 chmod 0755 /usr/share/passwall3/*.sh /usr/share/passwall3/*.lua
+
+rm -f /etc/uci-defaults/zzz-default-settings
 
 exit 0
