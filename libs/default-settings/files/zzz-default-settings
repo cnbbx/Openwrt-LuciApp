@@ -19,7 +19,6 @@ rm -f /usr/lib/lua/luci/view/admin_status/index/ddns.htm
 rm -f /usr/lib/lua/luci/view/admin_status/index/minidlna.htm
 
 sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/aria2.lua
-sed -i 's/services/nas/g' /usr/lib/lua/luci/view/aria2/overview_status.htm
 sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/hd_idle.lua
 sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/samba.lua
 sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/samba4.lua
@@ -30,6 +29,17 @@ sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/p910nd.lua
 sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/usb_printer.lua
 sed -i 's/\"services\"/\"nas\"/g' /usr/lib/lua/luci/controller/xunlei.lua
 sed -i 's/services/nas/g'  /usr/lib/lua/luci/view/minidlna_status.htm
+sed -i 's/services/nas/g' /usr/lib/lua/luci/view/aria2/overview_status.htm
+sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-aria2.json
+sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-hd_idle.json
+sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-samba.json
+sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-samba4.json
+sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-minidlna.json
+sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-transmission.json
+sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-p910nd.json
+sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-usb_printer.json
+sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-xunlei.json
+sed -i 's/services/nas/g' /usr/share/luci/menu.d/luci-app-mjpg-streamer.json
 
 ln -sf /sbin/ip /usr/bin/ip
 
